@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Estacion de tren</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div class="cuerpo">
+        <div class="pillar_entradas">
+            <div class="cabecera">
+                <h1 class="entrada">Entradas:</h1>
+                <p class="instruccion1"><i>(Seleccione el número de entradas que desees:)</i></p>
+            </div>
+            <div class="num_entradas">
+                <div class="a">
+                    <button class="btn_sum_res" id="decrement-btn" onclick="decrement()">-</button>
+                </div>
+                <div class="b">
+                    <h2 class="contador_entradas" id="count-el">0</h2>
+                </div>
+                <div class="c">
+                    <button class="btn_sum_res" id="increment-btn" onclick="increment()">+</button>
+                </div>
+            </div> <br>
+            <form class="form_edad">
+                <label for="list_edad">Indica tu edad:</label>
+                <input type="checkbox" id="niño" name="edad" value="niño" onclick="tar_niño()">
+                <label for="edad" id="text">Niño</label>
+                <input type="checkbox" id="adulto" name="edad" value="adulto" onclick="tar_adulto()">
+                <label for="edad">Adulto</label>
+            </form> <br>
+            <form class="form_bill">
+                <label class="tit_form_bill" for="list">Selecciona un billete:</label>
+                <select name="billete" id="billete" onclick="tarifas()">
+                    <option value="nulo" id="lista" selected="true">Selecciona una opción</option>
+                    <option value="sencillo-ida" id="lista">Sencillo ida</option>
+                    <option value="idayvuelta" id="lista">Ida y vuelta</option>
+                    <option value="multiviajes" id="lista">Multiviajes</option>
+                    <option value="bono" id="lista">Bono Transporte</option>
+                    <option value="bono-disc" id="lista">Bono Discapacidad</option>
+                </select>
+            </form> <br>
+            <button id="save-btn" onclick="save()">Comprar</button>
+            <p id="save-el">Entradas confirmadas:</p>
+        </div>
+        <table class="tabla">
+            <tr>
+                <th rowspan="2" class="bill">Billete</th>
+                <th colspan="3" class="pre">Precio</th> 
+            </tr>
+            <tr>
+                <td>Niños (0-18 años)</td>
+                <td>Adultos (+18 años)</td>
+            </tr>
+            <tr>
+                <td>Sencillo ida (1 viaje)</td>
+                <td>1.50€</td>
+                <td>2.50€</td>
+            </tr>
+            <tr>
+                <td>Sencillo ida y vuelta (1 viaje)</td>
+                <td>2.50€</td>
+                <td>3.50€</td>
+            </tr>
+            <tr>
+                <td>Multiviaje (10 viajes)</td>
+                <td>5€</td>
+                <td>6€</td>
+            </tr>
+            <tr>
+                <td>Bono Transporte (mensual)</td>
+                <td>8€</td>
+                <td>9€</td>
+            </tr>
+            <tr>
+                <td>Bono Transporte con discapacidad >33% (mensual)</td>
+                <td>6€</td>
+                <td>7€</td>
+            </tr>
+        </table>
+        <p class="cont_pers" id="cont_pers">Personas en la estación:</p>
+        <script src="index.js"></script>
+    </div>
+    </body>
+        </html>
